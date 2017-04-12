@@ -7,6 +7,10 @@
     </button>
 </div>
 
+<div *ngFor="let hero of heroes; let i = index">
+  <h1 *ngIf="i == 0">Firs one: {{hero.name}}</h1>
+</div>
+
 <ul class="heroes">
     <li *ngFor="let hero of heroes"
         [class.selected]="hero === selectedHero"
